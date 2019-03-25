@@ -1,8 +1,6 @@
-<div class='container'>
+<div class='container-fluid'>
     <div class="page-header">
-      <h2>flicker Search
         <img style="float: right;" *ngIf="loading" src='assets/images/loading.gif' />
-      </h2>
     </div>
    
     <div class="row">
@@ -10,9 +8,13 @@
         <app-flicker-search-tool (loading)="loading = $event" (find)="updateResults($event)"></app-flicker-search-tool>
       </div>
     </div>
-   
-    <div class="row" style="margin-top:20px">
-      <p>{{message}}</p>
-      <app-flicker-search-result *ngFor="let result of results" [result]="result"></app-flicker-search-result>
+    
+    <div *ngIf="!error" class="row" style="margin-top:20px">
+      <app-flicker-search-result *ngFor="let result of results" [tags]="tags" [result]="result"></app-flicker-search-result>
     </div>
+ 
+    <div *ngIf="error" class="row" style="margin-top:20px center">
+      <p>{{error}}</p>
+    </div>
+
   </div>

@@ -11,3 +11,4 @@ export class FlickerDetail {
         this.thumbnailUrl = obj && obj.thumbnailUrl || null;
     }
 }
+

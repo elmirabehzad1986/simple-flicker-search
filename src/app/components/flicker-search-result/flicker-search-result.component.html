@@ -1,9 +1,10 @@
-<div  class="col-sm-6 col-md-4">
-    <div  class="thumbnail">
-      <a href="{{result.imageUrl}}" target="_blank"><img src="{{result.thumbnailUrl}}"></a>
-      <div class="caption">
-        <h4>{{result.author}}</h4>
-        <p>{{result.tags}}</p>
-      </div>
-    </div>
+
+<div class="card">
+  <a  class="img-thumbnail-parent" href="{{result.imageUrl}}" target="_blank"><img class="img-thumbnail" src="{{result.thumbnailUrl}}" alt="Card image cap" > </a>
+  <div class="card-body" >
+    <p class="card-text" style="overflow:auto; height:8rem;">
+      {{highlightTags(result.tags)}}
+    </p>
+    <small class="text-muted">{{result.author}}</small>
   </div>
+</div>

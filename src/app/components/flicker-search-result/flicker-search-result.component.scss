@@ -1,0 +1,19 @@
+.scrollable{
+  overflow-y: auto;
+  max-height: 240px;
+}
+
+.card {
+  width: 20rem; 
+  height: 25rem; 
+  margin: 1rem; 
+  overflow: hidden;
+}
+
+.img-thumbnail-parent {
+  text-align: center; 
+  height: 10rem;
+}
+.img-thumbnail {
+  max-height: 100%;
+}
